@@ -1,0 +1,39 @@
+; freifunk-bw.de
+$TTL 900
+@   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
+    2020041700   ; serial
+    1800         ; refresh
+    120          ; retry
+    604800       ; expire
+    900 )        ; minimum
+ 
+@                        IN NS      ns1.ffrn.de.
+@                        IN NS      ns2.ffrn.de.
+@                        IN NS      ns3.ffrn.de.
+ 
+@                        IN A       138.201.30.254
+@                        IN AAAA    2a01:4f8:171:3242::72
+www                      IN CNAME   freifunk-bw.de.
+
+@                        IN CAA     0 issue "letsencrypt.org"
+@                        IN CAA     0 iodef "mailto:noc@ffrn.de"
+
+; mail
+@                        IN MX 10   mail.ffrn.de.
+autoconfig               IN CNAME   mail.ffrn.de.
+autodiscover             IN CNAME   mail.ffrn.de.
+_autodiscover._tcp       IN SRV     0 1 443 mail.ffrn.de.
+_caldavs._tcp            IN SRV     0 1 443 mail.ffrn.de.
+_carddavs._tcp           IN SRV     0 1 443 mail.ffrn.de.
+_imaps._tcp              IN SRV     0 1 993 mail.ffrn.de.
+_imap._tcp               IN SRV     0 1 143 mail.ffrn.de.
+_pop3s._tcp              IN SRV     0 1 995 mail.ffrn.de.
+_pop3._tcp               IN SRV     0 1 110 mail.ffrn.de.
+_sieve._tcp              IN SRV     0 1 4190 mail.ffrn.de.
+_smtps._tcp              IN SRV     0 1 465 mail.ffrn.de.
+_submission._tcp         IN SRV     0 1 587 mail.ffrn.de.
+@                        IN TXT     "v=spf1 mx -all"
+_caldavs._tcp            IN TXT     "path=/SOGo/dav/"
+_carddavs._tcp           IN TXT     "path=/SOGo/dav/"
+dkim._domainkey          IN TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCy/UpuxMdn7UBpu/ZV0buKwOW43lg7QHdY4jwg3AGDo2VkIHjGzrsuDWQGVZNHNb0cihLVIlywDd6xnLyo6qeo4//cYm+WWd1/cibXglaQGsWcptSyWzfm2S/7/cHZOOXvht4Apb7K7EpJYQOcUTcqP6rvEAWSpxbGBe8XIvbcnQIDAQAB"
+_dmarc                   IN TXT     "v=DMARC1; p=reject; rua=mailto:dmarc-report@ffrn.de"
