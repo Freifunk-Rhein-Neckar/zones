@@ -1,7 +1,7 @@
 ; freifunk-rhein-neckar.de
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2020041700   ; serial
+    2020042100   ; serial
     1800         ; refresh
     225          ; retry
     1209600      ; expire
