@@ -55,7 +55,6 @@ gw02                     IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3e8
 gw02.gluon               IN CNAME   gw02
 gw03                     IN A       138.201.30.247
 gw03                     IN AAAA    2a01:4f8:171:3242:0:8aff:fec9:1ef7
-gw03                     IN MX      10 mail
 gw04                     IN A       94.130.243.233
 gw04                     IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3e9
 gw04.gluon               IN CNAME   gw04
@@ -190,7 +189,7 @@ _submission._tcp         IN SRV     0 1 587 mail
 _caldavs._tcp            IN TXT     "path=/SOGo/dav/"
 _carddavs._tcp           IN TXT     "path=/SOGo/dav/"
 dkim._domainkey          IN TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCVO9T5segylg5LFP2zVvqhIC+W3QlGalP5fFo+gFadWWDwXWh3pPjqH1Ax25yz8Gq1YqHxk/NDstI2zdq+qMLFJ3fFqjpq2Y68SRlHQYYn3kEeAU0ShY7GnSy6kDyJulSQi7ZPbOp4cwMyIbB+8gLpRot1VMapbOWozcrxlFyOLQIDAQAB"
-_dmarc                   IN TXT     "v=DMARC1; p=reject; rua=mailto:dmarc-report@ffrn.de"
+_dmarc                   IN TXT     "v=DMARC1; p=reject; rua=mailto:dmarc-report@ffrn.de; sp=none;"
 
 
 freifunk-mannheim.de._report._dmarc      IN TXT "v=DMARC1"
