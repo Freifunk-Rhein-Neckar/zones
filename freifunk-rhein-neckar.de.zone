@@ -1,7 +1,7 @@
 ; freifunk-rhein-neckar.de
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2020042100   ; serial
+    2020042200   ; serial
     1800         ; refresh
     225          ; retry
     1209600      ; expire
@@ -19,14 +19,16 @@ www                      IN CNAME   freifunk-rhein-neckar.de.
 @                        IN CAA     0 iodef "mailto:noc@ffrn.de"
 @                        IN CAA     0 issue "letsencrypt.org"
 
-map                      IN CNAME   map.ffrn.de.
-blog                     IN CNAME   blog.ffrn.de.
+
+blog                     IN CNAME   blog.ffrn.de. 
+ffapi                    IN CNAME   ffapi.ffrn.de.
 forum                    IN CNAME   forum.ffrn.de.
-fw                       IN CNAME   fw.ffrn.de.
+fw                       IN CNAME   fw.ffrn.de.   
+map                      IN CNAME   map.ffrn.de.
+register                 IN CNAME   register.ffrn.de.
+salt                     IN CNAME   salt.ffrn.de.
 unifi.user               IN CNAME   unifi.ffrn.de.
 wiki                     IN CNAME   wiki.ffrn.de.
-register                 IN CNAME   register.ffrn.de.
-ffapi                    IN CNAME   ffapi.ffrn.de.
 
 
 gw02                     IN CNAME   gw02.ffrn.de.
