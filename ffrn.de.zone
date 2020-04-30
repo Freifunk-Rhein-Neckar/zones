@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2020043000   ; serial
+    2020043001   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -14,6 +14,7 @@ $TTL 900
 nodes                    IN NS      ns1
 nodes                    IN NS      ns2
 nodes                    IN NS      ns3
+
 
 @                        IN A       138.201.30.254
 @                        IN AAAA    2a01:4f8:171:3242::72
@@ -84,13 +85,20 @@ intern.gw09              IN A       10.142.0.9
 intern.gw09              IN AAAA    2a01:4f8:171:fcff::9
 
 
+master                   IN A       49.12.73.147
+master                   IN AAAA    2a01:4f8:c17:8ffc::1
+
+
 meet                     IN A       94.130.243.237
 meet                     IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ed
+
 
 mx2                      IN A       193.26.120.234
 mx2                      IN AAAA    2a06:e881:1707:1:400:c1ff:fe1a:78ea
 
+
 my                       IN A       10.142.255.1
+
 
 netbox                   IN AAAA    2a01:4f8:172:1713::6970
 
@@ -106,25 +114,28 @@ ns3                      IN AAAA    2a02:c207:3001:370::1
 one-a                    IN AAAA    2a01:4f8:140:4093::1:1
 
 
-salt                     IN A       49.12.73.147
-salt                     IN AAAA    2a01:4f8:c17:8ffc::1
-
-
 resolver1                IN AAAA    2a01:4f8:172:1713::116
 resolver2                IN AAAA    2a01:4f8:140:4093:0:c0ff:fea8:7b23
 
 
 rzl.upstream             IN AAAA    2a01:4f8:171:fc23::2
 
+
+salt                     IN CNAME   master
+
+
 stats                    IN A       5.189.157.196
 stats                    IN AAAA    2a02:c207:3001:370::1
 s                        IN CNAME   stats
 
+
 test1                    IN A       94.130.243.235
-                         IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3eb
+test1                    IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3eb
+
 
 tickets                  IN A       138.201.30.242
 tickets                  IN AAAA    2a01:4f8:171:3242::242
+
 
 tools-elsenz             IN A       138.201.30.254
 tools-elsenz             IN AAAA    2a01:4f8:171:3242::72
