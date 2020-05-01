@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2020050101   ; serial
+    2020050102   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -32,6 +32,7 @@ elsenz                   IN AAAA    2a01:4f8:171:3242::2
 itter                    IN A       88.198.68.105
 itter                    IN AAAA    2a01:4f8:140:4093::2
 
+itter-lxd                IN CNAME   itter
 
 1.ntp                    IN AAAA    2a01:4f8:140:4093::2
 ntp                      IN CNAME   1.ntp
