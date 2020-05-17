@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2020050800   ; serial
+    2020051700   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -158,6 +158,7 @@ dudle                    IN CNAME   tools-itter
 ffapi                    IN CNAME   tools-itter
 fw                       IN CNAME   tools-itter
 fw.gluon                 IN CNAME   fw
+*.fw.gluon               IN CNAME   fw.gluon
 md                       IN CNAME   tools-itter
 opkg.mirror              IN CNAME   tools-itter
 overview                 IN CNAME   tools-itter
