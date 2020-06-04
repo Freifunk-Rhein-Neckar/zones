@@ -1,0 +1,10 @@
+; general zone used for acme challenges
+$TTL 60
+@   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
+    1591245729   ; serial
+    1800         ; refresh
+    120          ; retry
+    604800       ; expire
+    10  )        ; minimum
+ 
+@                        IN NS      ns1.ffrn.de.
