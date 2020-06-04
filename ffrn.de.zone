@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2020060101   ; serial
+    2020060400   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -88,6 +88,7 @@ intern.gw09              IN AAAA    2a01:4f8:171:fcff::9
 
 master                   IN A       49.12.39.108
 master                   IN AAAA    2a01:4f8:c17:6b7f::1
+_acme-challenge.master   IN NS      ns1
 
 meet                     IN A       94.130.243.237
 meet                     IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ed
@@ -102,7 +103,7 @@ my                       IN A       10.142.255.1
 
 netbox                   IN A       10.142.76.129
 netbox                   IN AAAA    fdc3:67ce:cc7e:8002::129
-_acme-challenge.netbox   IN NS      ns1
+_acme-challenge.netbox   IN CNAME   _acme-challenge.master
 
 
 ns1                      IN A       138.201.30.254
@@ -115,7 +116,7 @@ ns3                      IN AAAA    2a02:c207:3001:370::1
 
 one-a                    IN A       10.142.76.1
 one-a                    IN AAAA    fdc3:67ce:cc7e:8000::1
-_acme-challenge.one-a    IN NS      ns1
+_acme-challenge.one-a    IN CNAME   _acme-challenge.master
 
 
 resolver1                IN AAAA    2a01:4f8:172:1713::116
