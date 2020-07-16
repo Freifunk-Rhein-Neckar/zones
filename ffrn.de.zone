@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2020070300   ; serial
+    2020071600   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -165,6 +165,7 @@ tools2                       IN CNAME   tools-elsenz
 cloud                        IN CNAME   tools-elsenz
 _acme-challenge.cloud        IN CNAME   _acme-challenge.tools-elsenz
 matrix                       IN CNAME   tools-elsenz
+_matrix._tcp                 IN SRV     10 0 443 matrix.ffrn.de.
 _acme-challenge.matrix       IN CNAME   _acme-challenge.tools-elsenz
 netcheck                     IN A       138.201.30.254
 _acme-challenge.netcheck     IN CNAME   _acme-challenge.tools-elsenz
@@ -224,8 +225,8 @@ vm02.rz17.fks.de             IN A       138.201.62.31
 vm02.rz17.fks.de             IN AAAA    2a01:4f8:172:1713::2
 
 
-_matrix._tcp                 IN SRV     10 0 443 matrix
 _github-challenge-Freifunk-Rhein-Neckar IN TXT "26c21313d6"
+
 
 ; Mail
 mail                         IN A       138.201.30.254
