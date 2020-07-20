@@ -37,7 +37,7 @@ itter                        IN AAAA    2a01:4f8:140:4093::2
 itter-lxd                    IN CNAME   itter
 
 1.ntp                        IN AAAA    2a01:4f8:140:4093::2
-ntp                          IN CNAME   1.ntp
+ntp                          IN AAAA    2a01:4f8:140:4093::2
 
 
 forum                        IN A       138.201.62.60
@@ -199,8 +199,10 @@ fw.gluon                     IN CNAME   fw
 _acme-challenge.fw.gluon     IN CNAME   _acme-challenge.tools-itter
 md                           IN CNAME   tools-itter
 _acme-challenge.md           IN CNAME   _acme-challenge.tools-itter
-opkg.mirror                  IN CNAME   tools-itter
-_acme-challenge.opkg.mirror  IN CNAME   _acme-challenge.tools-itter
+opkg                         IN CNAME   tools-itter
+_acme-challenge.opkg         IN CNAME   _acme-challenge.tools-itter
+opkg.mirror                  IN CNAME   opkg
+_acme-challenge.opkg.mirror  IN CNAME   _acme-challenge.opkg
 overview                     IN CNAME   tools-itter
 _acme-challenge.overview     IN CNAME   _acme-challenge.tools-itter
 wiki                         IN CNAME   tools-itter
