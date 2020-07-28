@@ -112,7 +112,7 @@ my                           IN A       10.142.255.1
 
 
 netbox                       IN A       10.142.76.129
-netbox                       IN AAAA    fdc3:67ce:cc7e:8002::129
+netbox                       IN AAAA    fdc3:67ce:cc7e:8010::1
 _acme-challenge.netbox       IN CNAME   _acme-challenge.stats
 
 
