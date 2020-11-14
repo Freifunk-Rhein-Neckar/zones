@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2020080700   ; serial
+    2020111400   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -148,9 +148,18 @@ _acme-challenge.stats        IN NS      ns1
 s                            IN CNAME   stats
 _acme-challenge.s            IN CNAME   _acme-challenge.stats
 
-test1                        IN A       94.130.243.235
-test1                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3eb
+
+test1                        IN A       94.130.243.236
+test1                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ec
 _acme-challenge.test1        IN NS      ns1
+
+test2                        IN A       94.130.243.238
+test2                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ee
+_acme-challenge.test2        IN NS      ns1
+
+test3                        IN A       94.130.243.239
+test3                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ef
+_acme-challenge.test3        IN NS      ns1
 
 
 tickets                      IN A       138.201.30.242
