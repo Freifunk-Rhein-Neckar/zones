@@ -1,7 +1,7 @@
 ; freifunk-rhein-neckar.de
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2020080500   ; serial
+    2020083000   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -35,6 +35,8 @@ owe                          IN CNAME   owe.ffrn.de.
 _acme-challenge.owe          IN CNAME   _acme-challenge.owe.ffrn.de.
 register                     IN CNAME   register.ffrn.de.
 _acme-challenge.register     IN CNAME   _acme-challenge.register.ffrn.de.
+unifi                        IN CNAME   unifi.ffrn.de.
+_acme-challenge.unifi        IN CNAME   _acme-challenge.unifi.ffrn.de.
 unifi.user                   IN CNAME   unifi.ffrn.de.
 _acme-challenge.unifi.user   IN CNAME   _acme-challenge.unifi.ffrn.de.
 wiki                         IN CNAME   wiki.ffrn.de.
