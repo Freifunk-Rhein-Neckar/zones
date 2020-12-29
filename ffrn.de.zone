@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2020122901   ; serial
+    2020122902   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -113,9 +113,6 @@ _acme-challenge.mx2          IN NS      ns1
 my                           IN A       10.142.255.1
 
 
-netbox                       IN A       10.142.76.129
-netbox                       IN AAAA    fdc3:67ce:cc7e:8010::1
-_acme-challenge.netbox       IN CNAME   _acme-challenge.stats
 
 
 ns1                          IN A       138.201.30.254
@@ -147,16 +144,25 @@ _acme-challenge.salt         IN CNAME   _acme-challenge.master
 stats                        IN A       5.189.157.196
 stats                        IN AAAA    2a02:c207:3001:370::1
 _acme-challenge.stats        IN NS      ns1
-s                            IN CNAME   stats
-_acme-challenge.s            IN CNAME   _acme-challenge.stats
+stats.ex                     IN CNAME   stats
+_acme-challenge.stats.in     IN CNAME   _acme-challenge.stats
 stats.in                     IN AAAA    fdc3:67ce:cc7e:8010::1
 _acme-challenge.stats.in     IN CNAME   _acme-challenge.stats
-prometheus                   IN CNAME   stats
+
+netbox                           IN CNAME   stats
+_acme-challenge.netbox           IN CNAME   _acme-challenge.stats
+netbox.ex                        IN CNAME   stats
+_acme-challenge.netbox.ex        IN CNAME   _acme-challenge.stats
+netbox.in                        IN CNAME   stats.in
+_acme-challenge.netbox.in        IN CNAME   _acme-challenge.stats
+prometheus                       IN CNAME   stats
 _acme-challenge.prometheus       IN CNAME   _acme-challenge.stats
-prometheus.in                IN CNAME   stats.in
+prometheus.in                    IN CNAME   stats.in
 _acme-challenge.prometheus.in    IN CNAME   _acme-challenge.stats
-prometheus.ex                IN CNAME   stats
+prometheus.ex                    IN CNAME   stats
 _acme-challenge.prometheus.ex    IN CNAME   _acme-challenge.stats
+s                                IN CNAME   stats
+_acme-challenge.s                IN CNAME   _acme-challenge.stats
 
 
 test1                        IN A       78.47.226.84
