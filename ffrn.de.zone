@@ -14,6 +14,9 @@ $TTL 900
 nodes                        IN NS      ns1
 nodes                        IN NS      ns2
 nodes                        IN NS      ns3
+in                           IN NS      ns1
+in                           IN NS      ns2
+in                           IN NS      ns3
 
 
 @                            IN A       138.201.30.254
@@ -137,7 +140,7 @@ _acme-challenge.resolver2    IN NS    ns1
 rzl.upstream                 IN AAAA    2a01:4f8:171:fc23::2
 
 
-salt                         IN CNAME   master
+salt                         IN CNAME   salt.in.ffrn.de.
 _acme-challenge.salt         IN CNAME   _acme-challenge.master
 
 

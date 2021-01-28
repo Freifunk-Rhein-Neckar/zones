@@ -1,6 +1,8 @@
 # this zonefile is automatically generated outside of this repository
 nodes.ffrn.de.zone
 
+in.ffrn.de.zone
+
 journal
 keys
 timers
