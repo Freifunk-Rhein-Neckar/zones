@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2021020800   ; serial
+    2021030700   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -262,6 +262,9 @@ autoconfig                   IN CNAME   mail
 _acme-challenge.autoconfig   IN CNAME   _acme-challenge.mail
 autodiscover                 IN CNAME   mail
 _acme-challenge.autodiscover IN CNAME   _acme-challenge.mail
+im                           IN CNAME   mail
+*.im                         IN CNAME   mail
+_acme-challenge.im           IN CNAME   _acme-challenge.mail
 _autodiscover._tcp           IN SRV     0 1 443 mail
 _caldavs._tcp                IN SRV     0 1 443 mail
 _carddavs._tcp               IN SRV     0 1 443 mail
