@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2021030700   ; serial
+    2021030701   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -275,9 +275,13 @@ _pop3s._tcp                  IN SRV     0 1 995 mail
 _sieve._tcp                  IN SRV     0 1 4190 mail
 _smtps._tcp                  IN SRV     0 1 465 mail
 _submission._tcp             IN SRV     0 1 587 mail
+_xmpp-client._tcp.im         IN SRV     10 1 5222 mail
+_xmpp-server._tcp.im         IN SRV     10 1 5269 mail
 @                            IN TXT     "v=spf1 mx ~all"
 _caldavs._tcp                IN TXT     "path=/SOGo/dav/"
 _carddavs._tcp               IN TXT     "path=/SOGo/dav/"
+
+
 dkim._domainkey              IN TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCVO9T5segylg5LFP2zVvqhIC+W3QlGalP5fFo+gFadWWDwXWh3pPjqH1Ax25yz8Gq1YqHxk/NDstI2zdq+qMLFJ3fFqjpq2Y68SRlHQYYn3kEeAU0ShY7GnSy6kDyJulSQi7ZPbOp4cwMyIbB+8gLpRot1VMapbOWozcrxlFyOLQIDAQAB"
 _dmarc                       IN TXT     "v=DMARC1; p=reject; rua=mailto:dmarc-report@ffrn.de; sp=none;"
 
