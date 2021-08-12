@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2021080800   ; serial
+    2021081300   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -51,8 +51,8 @@ ntp                          IN AAAA    2a01:4f8:140:4093::2
 ntp                          IN AAAA    2a01:4f8:160:624c::2
 
 
-forum                        IN A       88.99.128.116
-forum                        IN AAAA    2a01:4f8:172:1713:0:58ff:fe63:8074
+forum                        IN A       88.198.112.218
+;forum                        IN AAAA    2a01:4f8:160:624c:
 _acme-challenge.forum        IN CNAME   _acme-challenge.forum.in
 faq                          IN CNAME   forum
 _acme-challenge.faq          IN CNAME   _acme-challenge.forum.in
