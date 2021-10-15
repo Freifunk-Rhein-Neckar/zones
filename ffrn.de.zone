@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2021082000   ; serial
+    2021101500   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -250,13 +250,8 @@ _acme-challenge.unifi        IN CNAME   _acme-challenge.unifi.in
 v6upstream                   IN AAAA    2a01:4f8:171:fcfe::1
 _acme-challenge.v6upstream   IN CNAME   _acme-challenge.v6upstream.in
 
-
-web                          IN A       116.203.165.111
-web                          IN AAAA    2a01:4f8:1c0c:831c::1
-
 web1                         IN A       23.88.59.58
 web1                         IN AAAA    2a01:4f8:c2c:d537::1
-
 
 uplink.ebert-park-hotel.weinheim IN CNAME aqc207hqvxm8xhhv.myfritz.net.
 
