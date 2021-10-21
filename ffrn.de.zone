@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2021101500   ; serial
+    2021102100   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -30,35 +30,35 @@ _acme-challenge.www          IN CNAME   _acme-challenge.tools-elsenz.in
 @                            IN CAA     0 issue "letsencrypt.org"
 
 
+; Nameserver
+ns1                          IN A       138.201.30.254
+ns1                          IN AAAA    2a01:4f8:171:3242::72
+_acme-challenge.ns1          IN CNAME   _acme-challenge.tools-elsenz.in
+
+ns2                          IN A       94.130.243.234
+ns2                          IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ea
+_acme-challenge.ns2          IN CNAME   _acme-challenge.tools-itter.in
+
+ns3                          IN A       5.189.157.196
+ns3                          IN AAAA    2a02:c207:3001:370::1
+_acme-challenge.ns3          IN CNAME   _acme-challenge.stats.in
+
+
+; VM Hosts
 elsenz                       IN A       138.201.30.195
 elsenz                       IN AAAA    2a01:4f8:171:3242::2
 _acme-challenge.elsenz       IN CNAME   _acme-challenge.elsenz.in
+
 itter                        IN A       88.198.68.105
 itter                        IN AAAA    2a01:4f8:140:4093::2
 _acme-challenge.itter        IN CNAME   _acme-challenge.itter.in
+
 weschnitz                    IN A       176.9.161.125
 weschnitz                    IN AAAA    2a01:4f8:160:624c::2
-_acme-challenge.weschnitz   IN CNAME   _acme-challenge.weschnitz.in
-
-itter-lxd                    IN CNAME   itter
-
-1.ntp                        IN AAAA    2a01:4f8:140:4093::2
-2.ntp                        IN AAAA    2a01:4f8:160:624c::2
-ntp                          IN AAAA    2a01:4f8:140:4093::2
-ntp                          IN AAAA    2a01:4f8:160:624c::2
+_acme-challenge.weschnitz    IN CNAME   _acme-challenge.weschnitz.in
 
 
-forum                        IN A       88.198.112.218
-forum                        IN AAAA    2a01:4f8:160:624c:5054:ff:fe62:80ba
-_acme-challenge.forum        IN CNAME   _acme-challenge.forum.in
-faq                          IN CNAME   forum
-_acme-challenge.faq          IN CNAME   _acme-challenge.forum.in
-
-
-git                          IN A       138.201.30.243
-_acme-challenge.git          IN NS      ns1
-
-
+; Services
 map                          IN CNAME   map1
 _acme-challenge.map          IN CNAME   _acme-challenge.map1.in
 m                            IN CNAME   map
@@ -66,10 +66,80 @@ _acme-challenge.m            IN CNAME   _acme-challenge.map1.in
 tiles                        IN CNAME   map
 _acme-challenge.tiles        IN CNAME   _acme-challenge.map1.in
 
-map1                         IN A       88.198.112.217
-map1                         IN AAAA    2a01:4f8:160:624c:5054:ff:fed1:ebc5
-_acme-challenge.map1         IN CNAME   _acme-challenge.map1.in
+my                           IN A       10.142.255.1
 
+ntp                          IN AAAA    2a01:4f8:140:4093::2
+ntp                          IN AAAA    2a01:4f8:160:624c::2
+1.ntp                        IN AAAA    2a01:4f8:140:4093::2
+2.ntp                        IN AAAA    2a01:4f8:160:624c::2
+
+; Services on stats
+netbox                       IN CNAME   stats
+_acme-challenge.netbox       IN CNAME   _acme-challenge.stats.in
+prometheus                   IN CNAME   stats
+_acme-challenge.prometheus   IN CNAME   _acme-challenge.stats.in
+
+; Services on tools-elsenz
+cloud                        IN CNAME   tools-elsenz
+_acme-challenge.cloud        IN CNAME   _acme-challenge.tools-elsenz.in
+matrix                       IN CNAME   tools-elsenz
+_matrix._tcp                 IN SRV     10 0 443 matrix.ffrn.de.
+_acme-challenge.matrix       IN CNAME   _acme-challenge.tools-elsenz.in
+netcheck                     IN A       138.201.30.254
+_acme-challenge.netcheck     IN CNAME   _acme-challenge.tools-elsenz.in
+openlayers                   IN CNAME   tools-elsenz
+_acme-challenge.openlayers   IN CNAME   _acme-challenge.tools-elsenz.in
+pads                         IN CNAME   tools-elsenz
+_acme-challenge.pads         IN CNAME   _acme-challenge.tools-elsenz.in
+register                     IN CNAME   tools-elsenz
+_acme-challenge.register     IN CNAME   _acme-challenge.tools-elsenz.in
+reg                          IN CNAME   register
+_acme-challenge.reg          IN CNAME   _acme-challenge.tools-elsenz.in
+riot                         IN CNAME   tools-elsenz
+_acme-challenge.riot         IN CNAME   _acme-challenge.tools-elsenz.in
+element                      IN CNAME   tools-elsenz
+_acme-challenge.element      IN CNAME   _acme-challenge.tools-elsenz.in
+
+; Services on tools-itter
+_acme-challenge.tools-itter  IN CNAME   _acme-challenge.tools-itter.in
+blog                         IN CNAME   tools-itter
+_acme-challenge.blog         IN CNAME   _acme-challenge.tools-itter.in
+chat                         IN CNAME   tools-itter
+_acme-challenge.chat         IN CNAME   _acme-challenge.tools-itter.in
+dudle                        IN CNAME   tools-itter
+_acme-challenge.dudle        IN CNAME   _acme-challenge.tools-itter.in
+ffapi                        IN CNAME   tools-itter
+_acme-challenge.ffapi        IN CNAME   _acme-challenge.tools-itter.in
+fw                           IN CNAME   tools-itter
+_acme-challenge.fw           IN CNAME   _acme-challenge.tools-itter.in
+fw.gluon                     IN CNAME   fw
+*.fw.gluon                   IN CNAME   fw.gluon
+_acme-challenge.fw.gluon     IN CNAME   _acme-challenge.tools-itter.in
+md                           IN CNAME   tools-itter
+_acme-challenge.md           IN CNAME   _acme-challenge.tools-itter.in
+opkg                         IN CNAME   tools-itter
+_acme-challenge.opkg         IN CNAME   _acme-challenge.tools-itter.in
+opkg.mirror                  IN CNAME   opkg
+_acme-challenge.opkg.mirror  IN CNAME   _acme-challenge.opkg
+overview                     IN CNAME   tools-itter
+_acme-challenge.overview     IN CNAME   _acme-challenge.tools-itter.in
+owe                          IN CNAME   tools-itter
+_acme-challenge.owe          IN CNAME   _acme-challenge.tools-itter.in
+wiki                         IN CNAME   tools-itter
+_acme-challenge.wiki         IN CNAME   _acme-challenge.tools-itter.in
+w                            IN CNAME   wiki
+_acme-challenge.w            IN CNAME   _acme-challenge.tools-itter.in
+
+
+; VMs
+forum                        IN A       88.198.112.218
+forum                        IN AAAA    2a01:4f8:160:624c:5054:ff:fe62:80ba
+_acme-challenge.forum        IN CNAME   _acme-challenge.forum.in
+faq                          IN CNAME   forum
+_acme-challenge.faq          IN CNAME   _acme-challenge.forum.in
+
+git                          IN A       138.201.30.243
+_acme-challenge.git          IN NS      ns1
 
 gw02                         IN A       94.130.243.232 
 gw02                         IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3e8 
@@ -103,46 +173,25 @@ gw09                         IN A       138.201.30.244
 gw09                         IN AAAA    2a01:4f8:171:3242:0:8aff:fec9:1ef4
 _acme-challenge.gw09         IN CNAME   _acme-challenge.gw09.in
 
-nat64                        IN A       94.130.243.236
-nat64                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ec
-_acme-challenge.nat64        IN CNAME   _acme-challenge.nat64.in
-
+map1                         IN A       88.198.112.217
+map1                         IN AAAA    2a01:4f8:160:624c:5054:ff:fed1:ebc5
+_acme-challenge.map1         IN CNAME   _acme-challenge.map1.in
 
 master                       IN A       49.12.39.108
 master                       IN AAAA    2a01:4f8:c17:6b7f::1
 _acme-challenge.master       IN CNAME   _acme-challenge.master.in
 
-
 meet                         IN A       94.130.243.237
 meet                         IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ed
 _acme-challenge.meet         IN CNAME   _acme-challenge.meet.in
-
 
 mx2                          IN A       193.26.120.234
 mx2                          IN AAAA    2a06:e881:1707:1:400:c1ff:fe1a:78ea
 _acme-challenge.mx2          IN CNAME   _acme-challenge.mx2.in
 
-
-my                           IN A       10.142.255.1
-
-
-ns1                          IN A       138.201.30.254
-ns1                          IN AAAA    2a01:4f8:171:3242::72
-_acme-challenge.ns1          IN CNAME   _acme-challenge.tools-elsenz.in
-
-ns2                          IN A       94.130.243.234
-ns2                          IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ea
-_acme-challenge.ns2          IN CNAME   _acme-challenge.tools-itter.in
-
-ns3                          IN A       5.189.157.196
-ns3                          IN AAAA    2a02:c207:3001:370::1
-_acme-challenge.ns3          IN CNAME   _acme-challenge.stats.in
-
-
-one-a                        IN A       10.142.76.1
-one-a                        IN AAAA    fdc3:67ce:cc7e:8000::1
-_acme-challenge.one-a        IN CNAME   _acme-challenge.master.in
-
+nat64                        IN A       94.130.243.236
+nat64                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ec
+_acme-challenge.nat64        IN CNAME   _acme-challenge.nat64.in
 
 resolver1                    IN AAAA    2a01:4f8:160:624c:5054:ff:fe37:2749
 _acme-challenge.resolver1    IN CNAME   _acme-challenge.resolver1.in
@@ -150,22 +199,14 @@ _acme-challenge.resolver1    IN CNAME   _acme-challenge.resolver1.in
 resolver2                    IN AAAA    2a01:4f8:140:4093:0:c0ff:fea8:7b21
 _acme-challenge.resolver2    IN CNAME   _acme-challenge.resolver2.in
 
-
 salt                         IN CNAME   salt.in.ffrn.de.
 _acme-challenge.salt         IN CNAME   _acme-challenge.master.in
-
 
 stats                        IN A       5.189.157.196
 stats                        IN AAAA    2a02:c207:3001:370::1
 _acme-challenge.stats        IN CNAME   _acme-challenge.stats.in
-
-netbox                       IN CNAME   stats
-_acme-challenge.netbox       IN CNAME   _acme-challenge.stats.in
 s                            IN CNAME   stats
 _acme-challenge.s            IN CNAME   _acme-challenge.stats.in
-prometheus                   IN CNAME   stats
-_acme-challenge.prometheus   IN CNAME   _acme-challenge.stats.in
-
 
 test1                        IN A       94.130.243.236
 test1                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ec
@@ -179,68 +220,16 @@ test3                        IN A       94.130.243.239
 test3                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ef
 _acme-challenge.test3        IN CNAME   _acme-challenge.test3.in
 
-
 tickets                      IN A       138.201.30.242
 tickets                      IN AAAA    2a01:4f8:171:3242::242
 _acme-challenge.tickets      IN CNAME   _acme-challenge.tickets.in
-
 
 tools-elsenz                 IN A       138.201.30.254
 tools-elsenz                 IN AAAA    2a01:4f8:171:3242::72
 _acme-challenge.tools-elsenz IN CNAME   _acme-challenge.tools-elsenz.in
 
-cloud                        IN CNAME   tools-elsenz
-_acme-challenge.cloud        IN CNAME   _acme-challenge.tools-elsenz.in
-matrix                       IN CNAME   tools-elsenz
-_matrix._tcp                 IN SRV     10 0 443 matrix.ffrn.de.
-_acme-challenge.matrix       IN CNAME   _acme-challenge.tools-elsenz.in
-netcheck                     IN A       138.201.30.254
-_acme-challenge.netcheck     IN CNAME   _acme-challenge.tools-elsenz.in
-openlayers                   IN CNAME   tools-elsenz
-_acme-challenge.openlayers   IN CNAME   _acme-challenge.tools-elsenz.in
-pads                         IN CNAME   tools-elsenz
-_acme-challenge.pads         IN CNAME   _acme-challenge.tools-elsenz.in
-register                     IN CNAME   tools-elsenz
-_acme-challenge.register     IN CNAME   _acme-challenge.tools-elsenz.in
-reg                          IN CNAME   register
-_acme-challenge.reg          IN CNAME   _acme-challenge.tools-elsenz.in
-riot                         IN CNAME   tools-elsenz
-_acme-challenge.riot         IN CNAME   _acme-challenge.tools-elsenz.in
-element                      IN CNAME   tools-elsenz
-_acme-challenge.element      IN CNAME   _acme-challenge.tools-elsenz.in
-
-
 tools-itter                  IN A       94.130.243.234
 tools-itter                  IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ea
-_acme-challenge.tools-itter  IN CNAME   _acme-challenge.tools-itter.in
-blog                         IN CNAME   tools-itter
-_acme-challenge.blog         IN CNAME   _acme-challenge.tools-itter.in
-chat                         IN CNAME   tools-itter
-_acme-challenge.chat         IN CNAME   _acme-challenge.tools-itter.in
-dudle                        IN CNAME   tools-itter
-_acme-challenge.dudle        IN CNAME   _acme-challenge.tools-itter.in
-ffapi                        IN CNAME   tools-itter
-_acme-challenge.ffapi        IN CNAME   _acme-challenge.tools-itter.in
-fw                           IN CNAME   tools-itter
-_acme-challenge.fw           IN CNAME   _acme-challenge.tools-itter.in
-fw.gluon                     IN CNAME   fw
-*.fw.gluon                   IN CNAME   fw.gluon
-_acme-challenge.fw.gluon     IN CNAME   _acme-challenge.tools-itter.in
-md                           IN CNAME   tools-itter
-_acme-challenge.md           IN CNAME   _acme-challenge.tools-itter.in
-opkg                         IN CNAME   tools-itter
-_acme-challenge.opkg         IN CNAME   _acme-challenge.tools-itter.in
-opkg.mirror                  IN CNAME   opkg
-_acme-challenge.opkg.mirror  IN CNAME   _acme-challenge.opkg
-overview                     IN CNAME   tools-itter
-_acme-challenge.overview     IN CNAME   _acme-challenge.tools-itter.in
-owe                          IN CNAME   tools-itter
-_acme-challenge.owe          IN CNAME   _acme-challenge.tools-itter.in
-wiki                         IN CNAME   tools-itter
-_acme-challenge.wiki         IN CNAME   _acme-challenge.tools-itter.in
-w                            IN CNAME   wiki
-_acme-challenge.w            IN CNAME   _acme-challenge.tools-itter.in
-
 
 unifi                        IN A       10.142.60.10
 unifi                        IN AAAA    2a01:4f8:160:624c:5054:ff:fe62:3d89
@@ -252,6 +241,7 @@ _acme-challenge.v6upstream   IN CNAME   _acme-challenge.v6upstream.in
 
 web1                         IN A       23.88.59.58
 web1                         IN AAAA    2a01:4f8:c2c:d537::1
+
 
 uplink.ebert-park-hotel.weinheim IN CNAME aqc207hqvxm8xhhv.myfritz.net.
 
