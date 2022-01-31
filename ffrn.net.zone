@@ -1,15 +1,15 @@
 ; ffrn.net
 $TTL 900
 @   IN SOA ns1.ffrn.net. zonemaster.ffrn.de. (
-    2021011000   ; serial
+    2022020100   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
     900 )        ; minimum
 
-@                            IN NS      ns1.ffrn.net.
-@                            IN NS      ns2.ffrn.net.
-@                            IN NS      ns3.ffrn.net.
+@                            IN NS      ns1.ffrn.de.
+@                            IN NS      ns2.ffrn.de.
+@                            IN NS      ns3.ffrn.de.
 
 @                            IN A       138.201.30.254
 @                            IN AAAA    2a01:4f8:171:3242::72
