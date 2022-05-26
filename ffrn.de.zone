@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2022041300   ; serial
+    2022052600   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -59,6 +59,9 @@ _acme-challenge.weschnitz    IN CNAME   _acme-challenge.weschnitz.in
 
 
 ; Services
+matrix01                     IN AAAA    2a01:4f8:160:624c:5054:ff:fed6:5d01
+_acme-challenge.matrix01     IN CNAME   _acme-challenge.matrix01.in
+
 map                          IN CNAME   map1
 _acme-challenge.map          IN CNAME   _acme-challenge.map1.in
 m                            IN CNAME   map
