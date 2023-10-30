@@ -161,7 +161,7 @@ gw04                         IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3e9
 _acme-challenge.gw04         IN CNAME   _acme-challenge.gw04.in
 
 gw05                         IN A       88.198.112.220
-gw05                         IN AAAA    2a01:4f8:160:624c:5054:ff:fea8:53a5
+gw05                         IN AAAA    2a01:4f8:160:624c:80af:beff:fee3:f047
 _acme-challenge.gw05         IN CNAME   _acme-challenge.gw05.in
 
 gw06                         IN A       88.198.112.221
