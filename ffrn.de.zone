@@ -192,10 +192,6 @@ meet                         IN A       94.130.243.237
 meet                         IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ed
 _acme-challenge.meet         IN CNAME   _acme-challenge.meet.in
 
-mx2                          IN A       193.26.120.234
-mx2                          IN AAAA    2a06:e881:1707:1:400:c1ff:fe1a:78ea
-_acme-challenge.mx2          IN CNAME   _acme-challenge.mx2.in
-
 nat64                        IN A       94.130.243.236
 nat64                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ec
 _acme-challenge.nat64        IN CNAME   _acme-challenge.nat64.in
@@ -268,9 +264,7 @@ mail                         IN AAAA    2a01:4f8:171:3242::72
 _acme-challenge.mail         IN CNAME   _acme-challenge.tools-elsenz.in
 
 @                            IN MX      10 mail
-@                            IN MX      20 mx2
 mail                         IN MX      10 mail
-mail                         IN MX      20 mx2
 autoconfig                   IN CNAME   mail
 _acme-challenge.autoconfig   IN CNAME   _acme-challenge.mail
 autodiscover                 IN CNAME   mail

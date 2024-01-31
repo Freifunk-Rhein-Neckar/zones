@@ -58,7 +58,6 @@ _github-challenge-Freifunk-Rhein-Neckar     IN TXT "e1b0e54950"
 
 ; Mail
 @                            IN MX      10 mail.ffrn.de.
-@                            IN MX      20 mx2.ffrn.de.
 autoconfig                   IN CNAME   mail.ffrn.de.
 _acme-challenge.autoconfig   IN CNAME   _acme-challenge.mail.ffrn.de.
 autodiscover                 IN CNAME   mail.ffrn.de.
