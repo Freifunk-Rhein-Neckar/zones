@@ -1,7 +1,7 @@
 ; int.ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2024092700   ; serial
+    2024092701   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -35,4 +35,4 @@ map2                         IN A       192.168.100.15
 
 tom1                         IN A       192.168.100.200
 tom2                         IN A       192.168.100.201
-tom3
+tom3                         IN A       192.168.100.202
