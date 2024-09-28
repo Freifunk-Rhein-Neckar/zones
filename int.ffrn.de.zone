@@ -1,7 +1,7 @@
 ; int.ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2024092703   ; serial
+    2024092800   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -18,24 +18,44 @@ $TTL 900
 
 
 master                       IN A       192.168.100.1
+_acme-challenge.master       IN NS      ns1
 
 
 gw02                         IN A       192.168.100.2
+_acme-challenge.gw02         IN NS      ns1
 gw03                         IN A       192.168.100.3
+_acme-challenge.gw03         IN NS      ns1
 gw04                         IN A       192.168.100.4
+_acme-challenge.gw04         IN NS      ns1
 gw05                         IN A       192.168.100.5
+_acme-challenge.gw05         IN NS      ns1
 gw06                         IN A       192.168.100.6
+_acme-challenge.gw06         IN NS      ns1
 gw07                         IN A       192.168.100.7
+_acme-challenge.gw07         IN NS      ns1
 gw08                         IN A       192.168.100.8
+_acme-challenge.gw08         IN NS      ns1
 gw09                         IN A       192.168.100.9
+_acme-challenge.gw09         IN NS      ns1
 
 
 map2                         IN A       192.168.100.15
-stats                        IN A       192.168.100.16
+_acme-challenge.map2         IN NS      ns1
 
-alertmanager                 IN CNAME   stats
-grafana                      IN CNAME   stats
-prometheus                   IN CNAME   stats
+
+stats1                       IN A       192.168.100.16
+_acme-challenge.stats1       IN NS      ns1
+stats                        IN CNAME   stats1
+_acme-challenge.stats        IN CNAME   _acme-challenge.stats1
+influxdb                     IN CNAME   stats1
+_acme-challenge.influxdb     IN CNAME   _acme-challenge.stats1
+alertmanager                 IN CNAME   stats1
+_acme-challenge.gw09         IN CNAME   _acme-challenge.stats1
+grafana                      IN CNAME   stats1
+_acme-challenge.grafana      IN CNAME   _acme-challenge.stats1
+prometheus                   IN CNAME   stats1
+_acme-challenge.prometheus   IN CNAME   _acme-challenge.stats1
+
 
 tom1                         IN A       192.168.100.200
 tom2                         IN A       192.168.100.201
