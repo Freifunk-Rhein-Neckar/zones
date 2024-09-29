@@ -18,33 +18,33 @@ $TTL 900
 
 
 master                       IN A       192.168.100.1
-_acme-challenge.master       IN NS      ns1
+_acme-challenge.master       IN NS      ns1.ffrn.de.
 
 
 gw02                         IN A       192.168.100.2
-_acme-challenge.gw02         IN NS      ns1
+_acme-challenge.gw02         IN NS      ns1.ffrn.de.
 gw03                         IN A       192.168.100.3
-_acme-challenge.gw03         IN NS      ns1
+_acme-challenge.gw03         IN NS      ns1.ffrn.de.
 gw04                         IN A       192.168.100.4
-_acme-challenge.gw04         IN NS      ns1
+_acme-challenge.gw04         IN NS      ns1.ffrn.de.
 gw05                         IN A       192.168.100.5
-_acme-challenge.gw05         IN NS      ns1
+_acme-challenge.gw05         IN NS      ns1.ffrn.de.
 gw06                         IN A       192.168.100.6
-_acme-challenge.gw06         IN NS      ns1
+_acme-challenge.gw06         IN NS      ns1.ffrn.de.
 gw07                         IN A       192.168.100.7
-_acme-challenge.gw07         IN NS      ns1
+_acme-challenge.gw07         IN NS      ns1.ffrn.de.
 gw08                         IN A       192.168.100.8
-_acme-challenge.gw08         IN NS      ns1
+_acme-challenge.gw08         IN NS      ns1.ffrn.de.
 gw09                         IN A       192.168.100.9
-_acme-challenge.gw09         IN NS      ns1
+_acme-challenge.gw09         IN NS      ns1.ffrn.de.
 
 
 map2                         IN A       192.168.100.15
-_acme-challenge.map2         IN NS      ns1
+_acme-challenge.map2         IN NS      ns1.ffrn.de.
 
 
 stats1                       IN A       192.168.100.16
-_acme-challenge.stats1       IN NS      ns1
+_acme-challenge.stats1       IN NS      ns1.ffrn.de.
 stats                        IN CNAME   stats1
 _acme-challenge.stats        IN CNAME   _acme-challenge.stats1
 influxdb                     IN CNAME   stats1
