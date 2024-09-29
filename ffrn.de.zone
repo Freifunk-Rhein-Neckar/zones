@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2024092801   ; serial
+    2024092900   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -44,7 +44,7 @@ _acme-challenge.ns2          IN CNAME   _acme-challenge.tools-itter.in
 
 ns3                          IN A       5.189.157.196
 ns3                          IN AAAA    2a02:c207:3001:370::1
-_acme-challenge.ns3          IN CNAME   _acme-challenge.stats.in
+_acme-challenge.ns3          IN CNAME   _acme-challenge.stats1.int
 
 
 ; VM Hosts
@@ -81,13 +81,13 @@ ntp                          IN AAAA    2a01:4f8:160:624c::2
 
 ; Services on stats
 alertmanager                 IN CNAME   stats
-_acme-challenge.alertmanager IN CNAME   _acme-challenge.stats.in
+_acme-challenge.alertmanager IN CNAME   _acme-challenge.stats1.int
 netbox                       IN CNAME   stats
-_acme-challenge.netbox       IN CNAME   _acme-challenge.stats.in
+_acme-challenge.netbox       IN CNAME   _acme-challenge.stats1.int
 prometheus                   IN CNAME   stats
-_acme-challenge.prometheus   IN CNAME   _acme-challenge.stats.in
+_acme-challenge.prometheus   IN CNAME   _acme-challenge.stats1.int
 go-neb                       IN CNAME   stats
-_acme-challenge.go-neb       IN CNAME   _acme-challenge.stats.in
+_acme-challenge.go-neb       IN CNAME   _acme-challenge.stats1.int
 
 ; Services on tools-elsenz
 cloud                        IN CNAME   tools-elsenz
@@ -213,9 +213,9 @@ _acme-challenge.salt         IN CNAME   _acme-challenge.master.in
 
 stats                        IN A       5.189.157.196
 stats                        IN AAAA    2a02:c207:3001:370::1
-_acme-challenge.stats        IN CNAME   _acme-challenge.stats.in
+_acme-challenge.stats        IN CNAME   _acme-challenge.stats1.int
 s                            IN CNAME   stats
-_acme-challenge.s            IN CNAME   _acme-challenge.stats.in
+_acme-challenge.s            IN CNAME   _acme-challenge.stats1.int
 
 stats1                       IN A       89.58.15.197
                              IN AAAA    2a03:4000:60:11f::1
