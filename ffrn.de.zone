@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2024092900   ; serial
+    2024102400   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -79,14 +79,14 @@ ntp                          IN AAAA    2a01:4f8:160:624c::2
 1.ntp                        IN AAAA    2a01:4f8:140:4093::2
 2.ntp                        IN AAAA    2a01:4f8:160:624c::2
 
-; Services on stats
-alertmanager                 IN CNAME   stats
+; Services on stats1
+alertmanager                 IN CNAME   stats1
 _acme-challenge.alertmanager IN CNAME   _acme-challenge.stats1.int
-netbox                       IN CNAME   stats
+netbox                       IN CNAME   stats1
 _acme-challenge.netbox       IN CNAME   _acme-challenge.stats1.int
-prometheus                   IN CNAME   stats
+prometheus                   IN CNAME   stats1
 _acme-challenge.prometheus   IN CNAME   _acme-challenge.stats1.int
-go-neb                       IN CNAME   stats
+go-neb                       IN CNAME   stats1
 _acme-challenge.go-neb       IN CNAME   _acme-challenge.stats1.int
 
 ; Services on tools-elsenz
@@ -211,11 +211,14 @@ _acme-challenge.resolver2    IN CNAME   _acme-challenge.resolver2.in
 salt                         IN CNAME   salt.in.ffrn.de.
 _acme-challenge.salt         IN CNAME   _acme-challenge.master.in
 
-stats                        IN A       5.189.157.196
-stats                        IN AAAA    2a02:c207:3001:370::1
+stats                        IN CNAME   stats1
 _acme-challenge.stats        IN CNAME   _acme-challenge.stats1.int
-s                            IN CNAME   stats
+s                            IN CNAME   stats1
 _acme-challenge.s            IN CNAME   _acme-challenge.stats1.int
+
+stats0                       IN A       5.189.157.196
+                             IN AAAA    2a02:c207:3001:370::1
+_acme-challenge.stats0       IN CNAME   _acme-challenge.stats.in
 
 stats1                       IN A       89.58.15.197
                              IN AAAA    2a03:4000:60:11f::1
