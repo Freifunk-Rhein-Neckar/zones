@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2024102400   ; serial
+    2024110400   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -88,6 +88,8 @@ prometheus                   IN CNAME   stats1
 _acme-challenge.prometheus   IN CNAME   _acme-challenge.stats1.int
 go-neb                       IN CNAME   stats1
 _acme-challenge.go-neb       IN CNAME   _acme-challenge.stats1.int
+vectortiles                  IN CNAME   stats1
+_acme-challenge.vectortiles  IN CNAME   _acme-challenge.stats1.int
 
 ; Services on tools-elsenz
 cloud                        IN CNAME   tools-elsenz
