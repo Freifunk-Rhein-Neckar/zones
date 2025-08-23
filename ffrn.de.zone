@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2025082300   ; serial
+    2025082301   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -252,7 +252,7 @@ unifi                        IN A       10.142.60.10
 unifi                        IN AAAA    2a01:4f8:140:4093:5054:ff:fe62:3d89
 _acme-challenge.unifi        IN CNAME   _acme-challenge.unifi.in
 
-verein01                     IN AAAA    2a01:4f8:160:624c:5054:ff:fe48:b350
+verein01                     IN AAAA    2a01:4f8:140:4093:5054:ff:fe48:b350
 _acme-challenge.verein01     IN CNAME   _acme-challenge.verein01.in
 verein                       IN CNAME   verein01
 _acme-challenge.verein       IN CNAME   _acme-challenge.verein01.in
