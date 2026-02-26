@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2025122600   ; serial
+    2026022600   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -156,7 +156,7 @@ _acme-challenge.faq          IN CNAME   _acme-challenge.forum.in
 git                          IN A       138.201.30.243
 _acme-challenge.git          IN NS      ns1
 
-gluon-census                 IN AAAA    2a01:4f8:160:624c:1266:6aff:fec2:c796
+gluon-census                 IN CNAME   gluon-census.freifunk.net.
 
 gw02                         IN A       94.130.243.232 
 gw02                         IN AAAA    2a01:4f8:140:4093::ff2:2
