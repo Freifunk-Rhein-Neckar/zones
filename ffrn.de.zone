@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026022600   ; serial
+    2026022800   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -262,11 +262,13 @@ _acme-challenge.verein       IN CNAME   _acme-challenge.verein01.in
 v6upstream                   IN AAAA    2a01:4f8:171:fcfe::1
 _acme-challenge.v6upstream   IN CNAME   _acme-challenge.v6upstream.in
 
-web1                         IN A       23.88.59.58
-web1                         IN AAAA    2a01:4f8:c2c:d537::1
+sso1                         IN AAAA    2a01:4f8:160:624c:1266:6aff:fef5:a2a4
+                             IN A       192.168.100.37
+_acme-challenge.sso1         IN CNAME   _acme-challenge.sso1.int
 
+idm                          IN CNAME   sso1
+_acme-challenge.idm          IN CNAME   _acme-challenge.sso1
 
-uplink.ebert-park-hotel.weinheim IN CNAME aqc207hqvxm8xhhv.myfritz.net.
 
 _github-challenge-Freifunk-Rhein-Neckar IN TXT "26c21313d6"
 
