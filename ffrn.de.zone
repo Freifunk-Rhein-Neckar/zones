@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026030100   ; serial
+    2026030101   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -74,6 +74,15 @@ m                            IN CNAME   map
 _acme-challenge.m            IN CNAME   _acme-challenge.map1.in
 tiles                        IN CNAME   map
 _acme-challenge.tiles        IN CNAME   _acme-challenge.map1.in
+
+
+web                          IN CNAME   garage3
+*.web                        IN CNAME   garage3
+_acme-challenge.web          IN CNAME   _acme-challenge.garage.int
+
+s3                           IN CNAME   garage3
+*.s3                         IN CNAME   garage3
+_acme-challenge.s3           IN CNAME   _acme-challenge.garage.int
 
 my                           IN A       10.142.255.1
 
@@ -274,6 +283,12 @@ _acme-challenge.sso1         IN CNAME   _acme-challenge.sso1.int
 idm                          IN CNAME   sso1
 _acme-challenge.idm          IN CNAME   _acme-challenge.sso1
 
+garage1                      IN AAAA    2a01:4f8:140:4093:1266:6aff:fe66:4833
+_acme-challenge.garage1      IN CNAME   _acme-challenge.garage1.int
+garage2                      IN AAAA    2a01:4f8:160:624c:1266:6aff:fe72:8ae5
+_acme-challenge.garage2      IN CNAME   _acme-challenge.garage2.int
+garage3                      IN CNAME   stats1
+_acme-challenge.garage2      IN CNAME   _acme-challenge.stats.int
 
 _github-challenge-Freifunk-Rhein-Neckar IN TXT "26c21313d6"
 
