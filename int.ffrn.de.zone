@@ -1,7 +1,7 @@
 ; int.ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026030101   ; serial
+    2026031200   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -79,6 +79,9 @@ _acme-challenge.garage2      IN NS      ns1.ffrn.de.
 garage                       IN A       192.168.100.41
 garage                       IN A       192.168.100.42
 _acme-challenge.garage       IN NS      ns1.ffrn.de.
+
+web1                         IN A       192.168.100.61
+_acme-challenge.web1         IN NS      ns1.ffrn.de.
 
 
 tom1                         IN A       192.168.100.200
