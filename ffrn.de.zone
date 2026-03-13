@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026031204   ; serial
+    2026031300   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -77,6 +77,11 @@ _acme-challenge.m            IN CNAME   _acme-challenge.map1.int
 tiles                        IN CNAME   map
 _acme-challenge.tiles        IN CNAME   _acme-challenge.map1.int
 
+forum                        IN AAAA    2a01:4f8:222:f3ff::32:1
+                             IN A       94.130.243.237
+_acme-challenge.forum        IN CNAME   _acme-challenge.forum1.int
+faq                          IN CNAME   forum
+_acme-challenge.faq          IN CNAME   _acme-challenge.forum1.int
 
 web                          IN CNAME   garage
 *.web                        IN CNAME   garage
@@ -163,14 +168,8 @@ cloud1                       IN AAAA    2a01:4f8:160:624c:1266:6aff:fef1:2a32
                              IN A       192.168.100.38
 _acme-challenge.cloud1       IN CNAME   _acme-challenge.cloud1.int
 
-forum                        IN A       88.198.112.218
-forum                        IN AAAA    2a01:4f8:140:4093:5054:ff:fe62:80ba
-_acme-challenge.forum        IN CNAME   _acme-challenge.forum.in
-faq                          IN CNAME   forum
-_acme-challenge.faq          IN CNAME   _acme-challenge.forum.in
-
-git                          IN A       138.201.30.243
-_acme-challenge.git          IN NS      ns1
+forum1                       IN AAAA    2a01:4f8:222:f3ff::32:1
+_acme-challenge.forum1       IN CNAME   _acme-challenge.forum1.int
 
 gluon-census                 IN CNAME   gluon-census.freifunk.net.
 
@@ -212,10 +211,6 @@ _acme-challenge.map1         IN CNAME   _acme-challenge.map1.in
 master                       IN A       49.12.39.108
 master                       IN AAAA    2a01:4f8:c17:6b7f::1
 _acme-challenge.master       IN CNAME   _acme-challenge.master.in
-
-meet                         IN A       94.130.243.237
-meet                         IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ed
-_acme-challenge.meet         IN CNAME   _acme-challenge.meet.in
 
 nat64                        IN A       94.130.243.236
 nat64                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ec
