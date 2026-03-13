@@ -1,7 +1,7 @@
 ; int.ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026031201   ; serial
+    2026031202   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -46,7 +46,7 @@ gw09                         IN A       192.168.100.9
 _acme-challenge.gw09         IN NS      ns1.ffrn.de.
 
 
-map1                         IN A       192.168.100.14
+map1                         IN A       192.168.100.36
 _acme-challenge.map1         IN NS      ns1.ffrn.de.
 
 map2                         IN A       192.168.100.15

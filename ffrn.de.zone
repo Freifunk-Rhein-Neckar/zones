@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026031203   ; serial
+    2026031204   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -69,12 +69,13 @@ _acme-challenge.cloud        IN CNAME   _acme-challenge.cloud1.int
 matrix01                     IN AAAA    2a01:4f8:160:624c:5054:ff:fed6:5d01
 _acme-challenge.matrix01     IN CNAME   _acme-challenge.matrix01.in
 
-map                          IN CNAME   map1
-_acme-challenge.map          IN CNAME   _acme-challenge.map1.in
+map                          IN AAAA    2a01:4f8:140:77ff::36:1
+                             IN A       94.130.243.237
+_acme-challenge.map          IN CNAME   _acme-challenge.map1.int
 m                            IN CNAME   map
-_acme-challenge.m            IN CNAME   _acme-challenge.map1.in
+_acme-challenge.m            IN CNAME   _acme-challenge.map1.int
 tiles                        IN CNAME   map
-_acme-challenge.tiles        IN CNAME   _acme-challenge.map1.in
+_acme-challenge.tiles        IN CNAME   _acme-challenge.map1.int
 
 
 web                          IN CNAME   garage
@@ -205,8 +206,7 @@ gw09                         IN A       138.201.30.244
 gw09                         IN AAAA    2a01:4f8:171:3242::ff1:9
 _acme-challenge.gw09         IN CNAME   _acme-challenge.gw09.in
 
-map1                         IN A       88.198.112.217
-map1                         IN AAAA    2a01:4f8:140:4093:5054:ff:fed1:ebc5
+map1                         IN AAAA    2a01:4f8:140:77ff::36:1
 _acme-challenge.map1         IN CNAME   _acme-challenge.map1.in
 
 master                       IN A       49.12.39.108
