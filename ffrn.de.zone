@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026031300   ; serial
+    2026032200   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -62,12 +62,9 @@ _acme-challenge.weschnitz    IN CNAME   _acme-challenge.weschnitz.in
 
 
 ; Services
-cloud                        IN AAAA    2a01:4f8:160:624c:1266:6aff:fef1:2a32
+cloud                        IN AAAA    2a01:4f8:222:3481:1266:6aff:fef1:2a32
                              IN A       94.130.243.237
 _acme-challenge.cloud        IN CNAME   _acme-challenge.cloud1.int
-
-matrix01                     IN AAAA    2a01:4f8:160:624c:5054:ff:fed6:5d01
-_acme-challenge.matrix01     IN CNAME   _acme-challenge.matrix01.in
 
 map                          IN AAAA    2a01:4f8:140:77ff::36:1
                              IN A       94.130.243.237
@@ -94,9 +91,9 @@ _acme-challenge.s3           IN CNAME   _acme-challenge.garage.int
 my                           IN A       10.142.255.1
 
 ntp                          IN AAAA    2a01:4f8:140:4093::2
-ntp                          IN AAAA    2a01:4f8:160:624c::2
+ntp                          IN AAAA    2a01:4f8:222:3481::2
 1.ntp                        IN AAAA    2a01:4f8:140:4093::2
-2.ntp                        IN AAAA    2a01:4f8:160:624c::2
+2.ntp                        IN AAAA    2a01:4f8:222:3481::2
 
 ; Services on stats1
 alertmanager                 IN CNAME   stats1
@@ -164,7 +161,7 @@ _acme-challenge.w            IN CNAME   _acme-challenge.tools-itter.in
 
 
 ; VMs
-cloud1                       IN AAAA    2a01:4f8:160:624c:1266:6aff:fef1:2a32
+cloud1                       IN AAAA    2a01:4f8:222:3481:1266:6aff:fef1:2a32
                              IN A       192.168.100.38
 _acme-challenge.cloud1       IN CNAME   _acme-challenge.cloud1.int
 
@@ -186,11 +183,11 @@ gw04                         IN AAAA    2a01:4f8:140:4093::ff2:4
 _acme-challenge.gw04         IN CNAME   _acme-challenge.gw04.in
 
 gw05                         IN A       88.198.112.220
-gw05                         IN AAAA    2a01:4f8:160:624c::ff3:5
+gw05                         IN AAAA    2a01:4f8:222:f3ff::5:1
 _acme-challenge.gw05         IN CNAME   _acme-challenge.gw05.in
 
 gw06                         IN A       88.198.112.221
-gw06                         IN AAAA    2a01:4f8:160:624c::ff3:6
+gw06                         IN AAAA    2a01:4f8:222:3481::ff3:6
 _acme-challenge.gw06         IN CNAME   _acme-challenge.gw06.in
 
 gw07                         IN A       94.130.243.235
@@ -198,7 +195,7 @@ gw07                         IN AAAA    2a01:4f8:140:4093::ff2:7
 _acme-challenge.gw07         IN CNAME   _acme-challenge.gw07.in
 
 gw08                         IN A       88.198.112.222
-gw08                         IN AAAA    2a01:4f8:160:624c::ff3:8
+gw08                         IN AAAA    2a01:4f8:222:f3ff::8:1
 _acme-challenge.gw08         IN CNAME   _acme-challenge.gw08.in
 
 gw09                         IN A       138.201.30.244
@@ -216,10 +213,8 @@ nat64                        IN A       94.130.243.236
 nat64                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ec
 _acme-challenge.nat64        IN CNAME   _acme-challenge.nat64.in
 
-nixos-test1                  IN AAAA    2a01:4f8:160:624c:5054:ff:fe85:9d50
-_acme-challenge.nixos-test1  IN CNAME   _acme-challenge.nixos-test1.in
 
-resolver1                    IN AAAA    2a01:4f8:160:624c:5054:ff:fe37:2749
+resolver1                    IN AAAA    2a01:4f8:222:3481:5054:ff:fe37:2749
 _acme-challenge.resolver1    IN CNAME   _acme-challenge.resolver1.in
 
 resolver2                    IN AAAA    2a01:4f8:140:4093:0:c0ff:fea8:7b21
@@ -263,7 +258,7 @@ tools-itter                  IN A       94.130.243.234
 tools-itter                  IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ea
 
 unifi                        IN A       10.142.60.10
-unifi                        IN AAAA    2a01:4f8:160:624c:5054:ff:fe62:3d89
+unifi                        IN AAAA    2a01:4f8:222:3481:5054:ff:fe62:3d89
 _acme-challenge.unifi        IN CNAME   _acme-challenge.unifi.in
 
 verein01                     IN AAAA    2a01:4f8:140:4093:5054:ff:fe48:b350
@@ -274,22 +269,22 @@ _acme-challenge.verein       IN CNAME   _acme-challenge.verein01.in
 v6upstream                   IN AAAA    2a01:4f8:171:fcfe::1
 _acme-challenge.v6upstream   IN CNAME   _acme-challenge.v6upstream.in
 
-sso1                         IN AAAA    2a01:4f8:160:624c:1266:6aff:fef5:a2a4
+sso1                         IN AAAA    2a01:4f8:222:3481:1266:6aff:fef5:a2a4
 _acme-challenge.sso1         IN CNAME   _acme-challenge.sso1.int
 
-idm                          IN AAAA    2a01:4f8:160:624c:1266:6aff:fef5:a2a4
+idm                          IN AAAA    2a01:4f8:222:3481:1266:6aff:fef5:a2a4
                              IN A       94.130.243.237
 _acme-challenge.idm          IN CNAME   _acme-challenge.sso1
 
 garage1                      IN AAAA    2a01:4f8:140:4093:1266:6aff:fe66:4833
 _acme-challenge.garage1      IN CNAME   _acme-challenge.garage1.int
-garage2                      IN AAAA    2a01:4f8:160:624c:1266:6aff:fe72:8ae5
+garage2                      IN AAAA    2a01:4f8:222:3481:1266:6aff:fe72:8ae5
 _acme-challenge.garage2      IN CNAME   _acme-challenge.garage2.int
 garage3                      IN CNAME   stats1
 _acme-challenge.garage3      IN CNAME   _acme-challenge.stats.int
 
 garage                       IN AAAA    2a01:4f8:140:4093:1266:6aff:fe66:4833
-garage                       IN AAAA    2a01:4f8:160:624c:1266:6aff:fe72:8ae5
+garage                       IN AAAA    2a01:4f8:222:3481:1266:6aff:fe72:8ae5
 _acme-challenge.garage       IN CNAME   _acme-challenge.garage.int
 
 web1                         IN A       94.130.243.237
