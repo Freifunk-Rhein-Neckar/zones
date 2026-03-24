@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026032400   ; serial
+    2026032401   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -202,12 +202,12 @@ gw09                         IN A       138.201.30.244
 gw09                         IN AAAA    2a01:4f8:171:3242::ff1:9
 _acme-challenge.gw09         IN CNAME   _acme-challenge.gw09.in
 
+mail01                       IN A       49.12.39.108
+                             IN AAAA    2a01:4f8:c17:6b7f::1
+_acme-challenge.mail01       IN CNAME   _acme-challenge.mail01.int
+
 map1                         IN AAAA    2a01:4f8:140:77ff::36:1
 _acme-challenge.map1         IN CNAME   _acme-challenge.map1.in
-
-master                       IN A       49.12.39.108
-master                       IN AAAA    2a01:4f8:c17:6b7f::1
-_acme-challenge.master       IN CNAME   _acme-challenge.master.in
 
 nat64                        IN A       94.130.243.236
 nat64                        IN AAAA    2a01:4f8:140:4093:0:5eff:fe82:f3ec
@@ -301,7 +301,7 @@ mail                         IN AAAA    2a01:4f8:171:3242::72
 _acme-challenge.mail         IN CNAME   _acme-challenge.tools-elsenz.in
 
 @                            IN MX      10 mail
-mail                         IN MX      10 mail
+@                            IN MX      20 mail01
 autoconfig                   IN CNAME   mail
 _acme-challenge.autoconfig   IN CNAME   _acme-challenge.mail
 autodiscover                 IN CNAME   mail
