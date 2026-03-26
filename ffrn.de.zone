@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026032401   ; serial
+    2026032600   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -296,37 +296,16 @@ _github-challenge-Freifunk-Rhein-Neckar IN TXT "26c21313d6"
 
 
 ; Mail
-mail                         IN A       138.201.30.254
-mail                         IN AAAA    2a01:4f8:171:3242::72
-_acme-challenge.mail         IN CNAME   _acme-challenge.tools-elsenz.in
+mail                         IN CNAME   mail01
+_acme-challenge.mail         IN CNAME   _acme-challenge.mail01
 
-@                            IN MX      10 mail
-@                            IN MX      20 mail01
-autoconfig                   IN CNAME   mail
-_acme-challenge.autoconfig   IN CNAME   _acme-challenge.mail
-autodiscover                 IN CNAME   mail
-_acme-challenge.autodiscover IN CNAME   _acme-challenge.mail
-im                           IN CNAME   mail
-*.im                         IN CNAME   mail
-_acme-challenge.im           IN CNAME   _acme-challenge.mail
-_autodiscover._tcp           IN SRV     0 1 443 mail
-_caldavs._tcp                IN SRV     0 1 443 mail
-_carddavs._tcp               IN SRV     0 1 443 mail
-_imap._tcp                   IN SRV     0 1 143 mail
+@                            IN MX      10 mail01
+
+_submissions._tcp            IN SRV     0 1 465 mail
 _imaps._tcp                  IN SRV     0 1 993 mail
-_pop3._tcp                   IN SRV     0 1 110 mail
-_pop3s._tcp                  IN SRV     0 1 995 mail
-_sieve._tcp                  IN SRV     0 1 4190 mail
-_smtps._tcp                  IN SRV     0 1 465 mail
-_submission._tcp             IN SRV     0 1 587 mail
-_xmpp-client._tcp.im         IN SRV     10 1 5222 mail
-_xmpp-server._tcp.im         IN SRV     10 1 5269 mail
+
 @                            IN TXT     "v=spf1 mx ~all"
-_caldavs._tcp                IN TXT     "path=/SOGo/dav/"
-_carddavs._tcp               IN TXT     "path=/SOGo/dav/"
-
-
-dkim._domainkey              IN TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCVO9T5segylg5LFP2zVvqhIC+W3QlGalP5fFo+gFadWWDwXWh3pPjqH1Ax25yz8Gq1YqHxk/NDstI2zdq+qMLFJ3fFqjpq2Y68SRlHQYYn3kEeAU0ShY7GnSy6kDyJulSQi7ZPbOp4cwMyIbB+8gLpRot1VMapbOWozcrxlFyOLQIDAQAB"
+mail._domainkey              IN TXT     "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv5lSNsgOR4UxZqgkYvqsoaQIw2yMquvQ7JTjUJBY4J8TE71Azcu83iPz+xpyDyEYTh8nFUiKzC0+lMNgqUkksnCwgjhSNeL+u7GnpaasoyRGDRErLag3820VNZmecKsWwlLwH65xoe2O7jz+xaHcVSIfuJz4STsMICgIOozo796EXPVoHRijX4VG3UJaECGi0fhu1gI3naQ5oXQ0eChVoxS4FV/IWhY+SqPxmku/Lfh4057evURCZBDEiDdhFiaLBhRACb1W9hLpYU0UXc+liqCd5KyvuIVISLInS+d4vpAP4Elo972/Taz5K6r8vK7FAGAHXjrfmcbrcugfzyUAowIDAQAB"
 _dmarc                       IN TXT     "v=DMARC1; p=reject; rua=mailto:dmarc-report@ffrn.de; sp=none;"
 
 
