@@ -1,7 +1,7 @@
 ; int.ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026032401   ; serial
+    2026032700   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -22,6 +22,9 @@ itter                        IN A       192.168.100.123
 _acme-challenge.itter        IN NS      ns1.ffrn.de.
 weschnitz                    IN A       192.168.100.124
 _acme-challenge.weschnitz    IN NS      ns1.ffrn.de.
+
+mail01                       IN A       192.168.100.1
+_acme-challenge.mail01       IN NS      ns1.ffrn.de.
 
 gw02                         IN A       192.168.100.2
 _acme-challenge.gw02         IN NS      ns1.ffrn.de.
@@ -45,12 +48,6 @@ _acme-challenge.salt1        IN NS      ns1.ffrn.de.
 salt                         IN CNAME   salt1
 _acme-challenge.salt         IN CNAME   _acme-challenge.salt
 
-mail01                       IN A       192.168.100.1
-_acme-challenge.mail01       IN NS      ns1.ffrn.de.
-
-map1                         IN A       192.168.100.36
-_acme-challenge.map1         IN NS      ns1.ffrn.de.
-
 map2                         IN A       192.168.100.15
 _acme-challenge.map2         IN NS      ns1.ffrn.de.
 
@@ -65,11 +62,23 @@ _acme-challenge.alertmanager IN CNAME   _acme-challenge.stats1
 prometheus                   IN CNAME   stats1
 _acme-challenge.prometheus   IN CNAME   _acme-challenge.stats1
 
+tools-itter                  IN A       192.168.100.31
+_acme-challenge.tools-itter  IN NS      ns1.ffrn.de.
+
 forum1                       IN A       192.168.100.32
 _acme-challenge.forum1       IN NS      ns1.ffrn.de.
 
+unifi                        IN A       192.168.100.33
+_acme-challenge.unifi        IN NS      ns1.ffrn.de.
+
 tickets1                     IN A       192.168.100.34
 _acme-challenge.tickets1     IN NS      ns1.ffrn.de.
+
+nat64                        IN A       192.168.100.35
+_acme-challenge.nat64        IN NS      ns1.ffrn.de.
+
+map1                         IN A       192.168.100.36
+_acme-challenge.map1         IN NS      ns1.ffrn.de.
 
 sso1                         IN A       192.168.100.37
 _acme-challenge.sso1         IN NS      ns1.ffrn.de.
@@ -85,6 +94,13 @@ _acme-challenge.garage2      IN NS      ns1.ffrn.de.
 garage                       IN A       192.168.100.41
 garage                       IN A       192.168.100.42
 _acme-challenge.garage       IN NS      ns1.ffrn.de.
+
+resolver1                    IN A       192.168.100.53
+_acme-challenge.resolver1    IN NS      ns1.ffrn.de.
+
+resolver2                    IN A       192.168.100.54
+_acme-challenge.resolver2    IN NS      ns1.ffrn.de.
+
 
 web1                         IN A       192.168.100.61
 _acme-challenge.web1         IN NS      ns1.ffrn.de.
