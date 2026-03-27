@@ -1,7 +1,7 @@
 ; freifunk-ludwigshafen.de
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026032700   ; serial
+    2026032701   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -11,8 +11,8 @@ $TTL 900
 @                            IN NS      ns2.ffrn.de.
 @                            IN NS      ns3.ffrn.de.
 
-@                            IN A       138.201.30.254
-@                            IN AAAA    2a01:4f8:171:3242::72
+@                            IN A       88.198.106.115
+@                            IN AAAA    2a01:4f8:222:f3ff::30:1
 _acme-challenge              IN CNAME   _acme-challenge.ffrn.de.
 www                          IN CNAME   freifunk-ludwigshafen.de.
 _acme-challenge.www          IN CNAME   _acme-challenge.www.ffrn.de.
