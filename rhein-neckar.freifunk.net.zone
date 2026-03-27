@@ -1,7 +1,7 @@
 ; rhein-neckar.freifunk.net
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026032600   ; serial
+    2026032700   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -25,3 +25,5 @@ _acme-challenge.www          IN CNAME   _acme-challenge.www.ffrn.de.
 @                            IN TXT     "v=spf1 mx -all"
 mail._domainkey              IN TXT     "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3zQRE8UoG0MYQ10StkygcxGVBQr4WfYsc7KxWldleb3H3jEYEDAGMiB3g03ITq8UweAu40pWfhpBfaAbgQ606sUazqf44Cq4214vXp5oOnCFFkaqQsSueb8KkQ3sH+Zj2ndVujP5XR80U1g2YvcYujyqtCXH0RgAHsHXgrld4RBUow6X2b7s3XUsB/o3ePV860f+P2JUfX1AvwEcXlWpFsU8r8XKlHG3GJSH5I6SCmG4zMi/J1fzay/qzs7IiYzZismlF5esSQ7dAd+yDFIttD1raAStnHc54MNxfJvBQx1FlJ7l41khf0s2RVYtOGGxS8Rxd0wkrfjYFIBeTe1MXwIDAQAB"
 _dmarc                       IN TXT     "v=DMARC1; p=reject; rua=mailto:dmarc-report@ffrn.de"
+_submissions._tcp            IN SRV     0 1 465 mail.ffrn.de.
+_imaps._tcp                  IN SRV     0 1 993 mail.ffrn.de.

@@ -1,7 +1,7 @@
 ; freifunk-rhein-neckar.de
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026032600   ; serial
+    2026032700   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -61,3 +61,5 @@ _github-challenge-Freifunk-Rhein-Neckar     IN TXT "e1b0e54950"
 @                            IN TXT     "v=spf1 mx ~all"
 mail._domainkey              IN TXT     "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv+PrgRjAsDz+nc40k1at+6O5EbOVqDkyyqlxitQWrmNOS6ueGweAXpyV6SkA6X7VItQJYuJ6D6oqpgiW4/VcdE8p4qCxBRpu5TYdfMkIlicNMkI3RpYASDyTp7toImh0A57jSte3tRn7lvlyRja255I9gcSytu6k7mpl4W8F39MdRWSgzeq6Krknds8ozzS1AtbnTqEKZ6rpu5JnrkORCgEvxprutA2EXk8E8J6eu/youAbORV8az9q9swCRIvyV+39l2ZAtcnbT25MQwTgPUCgHeWTiCUre8MiSSrye9rD2tzF6nWJDePbv7RT1r1FlYjzK24SzCnOHIBWOSU4MfQIDAQAB"
 _dmarc                       IN TXT     "v=DMARC1; p=reject; rua=mailto:dmarc-report@ffrn.de; sp=none;"
+_submissions._tcp            IN SRV     0 1 465 mail.ffrn.de.
+_imaps._tcp                  IN SRV     0 1 993 mail.ffrn.de.

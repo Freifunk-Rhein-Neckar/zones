@@ -1,7 +1,7 @@
 ; ffbw.de
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2021011000   ; serial
+    2026032700   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -21,21 +21,9 @@ _acme-challenge.www          IN CNAME   _acme-challenge.www.ffrn.de.
 @                            IN CAA     0 iodef "mailto:noc@ffrn.de"
 
 ; mail
-@                            IN MX 10   mail.ffrn.de.
-autoconfig                   IN CNAME   mail.ffrn.de.
-autodiscover                 IN CNAME   mail.ffrn.de.
-_autodiscover._tcp           IN SRV     0 1 443 mail.ffrn.de.
-_caldavs._tcp                IN SRV     0 1 443 mail.ffrn.de.
-_carddavs._tcp               IN SRV     0 1 443 mail.ffrn.de.
-_imaps._tcp                  IN SRV     0 1 993 mail.ffrn.de.
-_imap._tcp                   IN SRV     0 1 143 mail.ffrn.de.
-_pop3s._tcp                  IN SRV     0 1 995 mail.ffrn.de.
-_pop3._tcp                   IN SRV     0 1 110 mail.ffrn.de.
-_sieve._tcp                  IN SRV     0 1 4190 mail.ffrn.de.
-_smtps._tcp                  IN SRV     0 1 465 mail.ffrn.de.
-_submission._tcp             IN SRV     0 1 587 mail.ffrn.de.
+@                            IN MX      10 mail01.ffrn.de.
 @                            IN TXT     "v=spf1 mx -all"
-_caldavs._tcp                IN TXT     "path=/SOGo/dav/"
-_carddavs._tcp               IN TXT     "path=/SOGo/dav/"
-dkim._domainkey              IN TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAuk6WFgkbUUGiLWix8dlrYoe+eiB4qJFUd//Sk9mY+xaLGouoWN5hANiZVFMpXRT/xqewCatQeT/E9PevZqA9ygrpTb8Yixzc2pCjqgnmBjDh1Wt1ww6qNoaopDnjGkTBbFlAh/C2Zqm15XUqVIoFepY9RcEEi+KLDGKznMPBiwIDAQAB"
+mail._domainkey              IN TXT     "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqziDzE9FUR1NU5bgOPEfCmigjEJH9mc7nIuL84q+nhpGGLljw72WkZjd7yQxK8OZ7blBxOYVxwWdcLhVPJRI0N9ko8Ie6zFzoyyx69D72Xr3cp8yAvBzTcGnhKEjOLM8kileBs4JYtHaunDkYb1yuMNGuaTLroGF3V1oGvI7CvJD3eVcBkRpqaxwjNDYqBTNpiKC2Kd8AlHLavcWX8V/gve01qbNfkHlFyycKojWZLhMI9CcRAwDw8qCXdHsZyxkGgB6MaT04hzgHD2h8out36lRDr+1vyxdKg6HrZF+hrkvmyuLDijdZWKzyzrXI5hoAsP6B7loy2vLR85Zm+1RxwIDAQAB;"
 _dmarc                       IN TXT     "v=DMARC1; p=reject; rua=mailto:dmarc-report@ffrn.de"
+_submissions._tcp            IN SRV     0 1 465 mail.ffrn.de.
+_imaps._tcp                  IN SRV     0 1 993 mail.ffrn.de.
