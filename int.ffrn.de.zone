@@ -1,7 +1,7 @@
 ; int.ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026032701   ; serial
+    2026032800   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -64,6 +64,10 @@ _acme-challenge.prometheus   IN CNAME   _acme-challenge.stats1
 
 tools-elsenz                 IN A       192.168.100.30
 _acme-challenge.tools-elsenz IN NS      ns1.ffrn.de.
+ns1                          IN CNAME   tools-elsenz
+_acme-challenge.ns1          IN CNAME   _acme-challenge.tools-elsenz
+ns-update                    IN CNAME   ns1
+_acme-challenge.ns-update    IN NS      _acme-challenge.tools-elsenz
 
 tools-itter                  IN A       192.168.100.31
 _acme-challenge.tools-itter  IN NS      ns1.ffrn.de.
