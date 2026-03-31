@@ -1,7 +1,7 @@
 ; ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026032800   ; serial
+    2026033101   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -48,10 +48,6 @@ _acme-challenge.ns3          IN CNAME   _acme-challenge.stats1.int
 
 
 ; VM Hosts
-elsenz                       IN A       138.201.30.195
-elsenz                       IN AAAA    2a01:4f8:171:3242::2
-_acme-challenge.elsenz       IN CNAME   _acme-challenge.elsenz.int
-
 itter                        IN A       88.198.68.105
 itter                        IN AAAA    2a01:4f8:140:4093::2
 _acme-challenge.itter        IN CNAME   _acme-challenge.itter.int
@@ -174,10 +170,6 @@ gw02                         IN A       94.130.243.232
 gw02                         IN AAAA    2a01:4f8:140:4093::ff2:2
 _acme-challenge.gw02         IN CNAME   _acme-challenge.gw02.in
 
-gw03                         IN A       138.201.30.247
-gw03                         IN AAAA    2a01:4f8:171:3242::ff1:3
-_acme-challenge.gw03         IN CNAME   _acme-challenge.gw03.in
-
 gw04                         IN A       94.130.243.233
 gw04                         IN AAAA    2a01:4f8:140:4093::ff2:4
 _acme-challenge.gw04         IN CNAME   _acme-challenge.gw04.in
@@ -197,10 +189,6 @@ _acme-challenge.gw07         IN CNAME   _acme-challenge.gw07.in
 gw08                         IN A       88.198.112.222
 gw08                         IN AAAA    2a01:4f8:222:f3ff::8:1
 _acme-challenge.gw08         IN CNAME   _acme-challenge.gw08.in
-
-gw09                         IN A       138.201.30.244
-gw09                         IN AAAA    2a01:4f8:171:3242::ff1:9
-_acme-challenge.gw09         IN CNAME   _acme-challenge.gw09.in
 
 mail01                       IN A       49.12.39.108
                              IN AAAA    2a01:4f8:c17:6b7f::1
@@ -265,9 +253,6 @@ verein01                     IN AAAA    2a01:4f8:140:4093:5054:ff:fe48:b350
 _acme-challenge.verein01     IN CNAME   _acme-challenge.verein01.in
 verein                       IN CNAME   verein01
 _acme-challenge.verein       IN CNAME   _acme-challenge.verein01.in
-
-v6upstream                   IN AAAA    2a01:4f8:171:fcfe::1
-_acme-challenge.v6upstream   IN CNAME   _acme-challenge.v6upstream.in
 
 sso1                         IN AAAA    2a01:4f8:222:3481:1266:6aff:fef5:a2a4
 _acme-challenge.sso1         IN CNAME   _acme-challenge.sso1.int
