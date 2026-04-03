@@ -1,7 +1,7 @@
 ; int.ffrn.de.
 $TTL 900
 @   IN SOA ns1.ffrn.de. zonemaster.ffrn.de. (
-    2026032800   ; serial
+    2026040301   ; serial
     3600         ; refresh
     900          ; retry
     1209600      ; expire
@@ -25,6 +25,8 @@ _acme-challenge.weschnitz    IN NS      ns1.ffrn.de.
 
 mail01                       IN A       192.168.100.1
 _acme-challenge.mail01       IN NS      ns1.ffrn.de.
+rspamd                       IN CNAME   mail01
+_acme-challenge.rspamd       IN CNAME   _acme-challenge.mail01
 
 gw02                         IN A       192.168.100.2
 _acme-challenge.gw02         IN NS      ns1.ffrn.de.
